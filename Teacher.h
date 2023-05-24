@@ -28,8 +28,8 @@ public:
     Teacher& operator=(const Teacher& other);
 
     // Перевантажені потокові операції >> та <<
-    std::istream& operator>>(std::istream& input, Teacher& teacher);
-    std::ostream& operator<<(std::ostream& output, const Teacher& teacher);
+    friend std::istream& operator>>(std::istream& input, Teacher& teacher);
+    friend std::ostream& operator<<(std::ostream& output, const Teacher& teacher);
 
 private:
     std::string teacherName;

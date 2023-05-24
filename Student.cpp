@@ -11,7 +11,7 @@ Student::Student(int groupNumber, const std::string& studentName)
 
 Student::~Student()
 {
-    // Ğ¢ÑƒÑ‚ Ğ¼Ğ¾Ğ¶Ğ½Ğ° Ñ€ĞµĞ°Ğ»Ñ–Ğ·ÑƒĞ²Ğ°Ñ‚Ğ¸ Ğ½ĞµĞ¾Ğ±Ñ…Ñ–Ğ´Ğ½Ñƒ Ğ»Ğ¾Ğ³Ñ–ĞºÑƒ Ğ¿Ñ€Ğ¸ Ğ·Ğ½Ğ¸Ñ‰ĞµĞ½Ğ½Ñ– Ğ¾Ğ±'Ñ”ĞºÑ‚Ğ°
+    // Òóò ìîæíà ğåàë³çóâàòè íåîáõ³äíó ëîã³êó ïğè çíèùåíí³ îá'ºêòà
 }
 
 int Student::getGroupNumber() const
@@ -40,7 +40,8 @@ void Student::operator()(int group, const std::string& name)
     studentName = name;
 }
 
-Student& Student::operator=(const Student& other) {
+Student& Student::operator=(const Student& other)
+{
     if (this != &other)
     {
         groupNumber = other.groupNumber;
@@ -51,9 +52,9 @@ Student& Student::operator=(const Student& other) {
 }
 
 std::istream& operator>>(std::istream& input, Student& student) {
-    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ³Ñ€ÑƒĞ¿Ğ¸: ";
+    std::cout << "Ââåä³òü íîìåğ ãğóïè: ";
     input >> student.groupNumber;
-    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¿Ñ€Ñ–Ğ·Ğ²Ğ¸Ñ‰Ğµ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: ";
+    std::cout << "Ââåä³òü ïğ³çâèùå ñòóäåíòà: ";
 
     input.ignore();
     getline(input, student.studentName);
@@ -62,8 +63,8 @@ std::istream& operator>>(std::istream& input, Student& student) {
 }
 
 std::ostream& operator<<(std::ostream& output, const Student& student) {
-    output << "ĞĞ¾Ğ¼ĞµÑ€ Ğ³Ñ€ÑƒĞ¿Ğ¸: " << student.groupNumber << std::endl;
-    output << "ĞŸÑ€Ñ–Ğ·Ğ²Ğ¸Ñ‰Ğµ ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ğ°: " << student.studentName << std::endl;
+    output << "Íîìåğ ãğóïè: " << student.groupNumber << std::endl;
+    output << "Ïğ³çâèùå ñòóäåíòà: " << student.studentName << std::endl;
 
     return output;
 }

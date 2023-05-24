@@ -51,22 +51,22 @@ Teacher& Teacher::operator=(const Teacher& other)
     return *this;
 }
 
-std::istream& Teacher::operator>>(std::istream& input, Teacher& teacher)
+std::istream& operator>>(std::istream& input, Teacher& teacher)
 {
-    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¿Ñ€Ğ¸Ğ·Ğ²Ğ¸Ñ‰Ğµ Ğ²Ğ¸ĞºĞ»Ğ°Ğ´Ğ°Ñ‡Ğ°: ";
+    std::cout << "Ââåä³òü ïğèçâèùå âèêëàäà÷à: ";
     input.ignore();
     getline(input, teacher.teacherName);
 
-    std::cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¿Ğ¾ÑĞ°Ğ´Ñƒ Ğ²Ğ¸ĞºĞ»Ğ°Ğ´Ğ°Ñ‡Ğ°: ";
+    std::cout << "Ââåä³òü ïîñàäó âèêëàäà÷à: ";
     getline(input, teacher.teacherPosition);
 
     return input;
 }
 
-std::ostream &Teacher::operator<<(std::ostream& output, const Teacher& teacher)
+std::ostream& operator<<(std::ostream& output, const Teacher& teacher)
 {
-    output << "ĞŸÑ€Ñ–Ğ·Ğ²Ğ¸Ñ‰Ğµ Ğ²Ğ¸ĞºĞ»Ğ°Ğ´Ğ°Ñ‡Ğ°: " << teacher.teacherName << std::endl;
-    output << "ĞŸĞ¾ÑĞ°Ğ´Ğ° Ğ²Ğ¸ĞºĞ»Ğ°Ğ´Ğ°Ñ‡Ğ°: " << teacher.teacherPosition << std::endl;
+    output << "Ïğ³çâèùå âèêëàäà÷à: " << teacher.teacherName << std::endl;
+    output << "Ïîñàäà âèêëàäà÷à: " << teacher.teacherPosition << std::endl;
 
     return output;
 }
