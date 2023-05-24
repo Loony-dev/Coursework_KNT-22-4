@@ -1,6 +1,10 @@
 #include <iostream>
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+int main()
+{
+    setlocale(LC_ALL, "ukr");
+
+    // code here..
+
     return 0;
 }
