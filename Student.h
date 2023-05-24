@@ -31,6 +31,8 @@ public:
     friend std::istream& operator>>(std::istream& input, Student& student);
     friend std::ostream& operator<<(std::ostream& output, const Student& student);
 
+    virtual void printName() const;
+
 private:
     int groupNumber;
 

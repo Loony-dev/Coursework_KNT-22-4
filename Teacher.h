@@ -31,6 +31,8 @@ public:
     friend std::istream& operator>>(std::istream& input, Teacher& teacher);
     friend std::ostream& operator<<(std::ostream& output, const Teacher& teacher);
 
+    virtual void printName() const;
+
 private:
     std::string teacherName;
     std::string teacherPosition;

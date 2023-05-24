@@ -35,6 +35,8 @@ public:
     friend std::istream& operator>>(std::istream& input, Exam& exam);
     friend std::ostream& operator<<(std::ostream& output, const Exam& exam);
 
+    void printName() const override;
+
 private:
     std::string subjectName;
     std::string examDate;

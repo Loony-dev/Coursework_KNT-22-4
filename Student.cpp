@@ -68,3 +68,8 @@ std::ostream& operator<<(std::ostream& output, const Student& student) {
 
     return output;
 }
+
+void Student::printName() const
+{
+    std::cout << "Прізвище студента: " << studentName << std::endl;
+}

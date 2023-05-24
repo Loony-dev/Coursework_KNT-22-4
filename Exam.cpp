@@ -124,3 +124,8 @@ std::ostream& operator<<(std::ostream& output, const Exam& exam)
 
     return output;
 }
+
+void Exam::printName() const
+{
+    std::cout << "Назва предмету: " << subjectName << std::endl;
+}

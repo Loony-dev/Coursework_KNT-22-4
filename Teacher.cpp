@@ -70,3 +70,8 @@ std::ostream& operator<<(std::ostream& output, const Teacher& teacher)
 
     return output;
 }
+
+void Teacher::printName() const
+{
+    std::cout << "Прізвище викладача: " << teacherName << std::endl;
+}
