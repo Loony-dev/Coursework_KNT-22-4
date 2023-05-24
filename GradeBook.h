@@ -6,8 +6,10 @@
 
 class GradeBook {
 public:
+    // Конструктор за замовчуванням
     GradeBook() = default;
 
+    // Деструктор
     ~GradeBook() = default;
 
     void addExam(const Exam& exam);
